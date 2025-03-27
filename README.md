@@ -27,7 +27,7 @@ The goal of this project is to recreate essential functions from `<string.h>`, `
 
 ## **📂 Project Structure**
 ```
-libft/
+42-Libft/
 │── ft_memset.c        # Fill memory with a constant byte
 │── ft_bzero.c         # Zero out memory
 │── ft_memcpy.c        # Copy memory area
@@ -74,8 +74,8 @@ To use the library in your project, clone the repository and compile it.
 
 ### **📥 Clone & Compile**
 ```sh
-git clone https://github.com/yourusername/libft.git
-cd libft
+git clone https://github.com/osmaneb23/42-Libft.git
+cd 42-Libft
 make
 ```
 
@@ -98,7 +98,3 @@ gcc your_file.c -L. -lft -o your_program
   - `fclean` (remove object files & archive)
   - `re` (recompile everything)
   - `bonus` (compile the bonus files)
-
----
-
-🔥 *Libft was my first big step into serious C programming at 42. Feel free to explore, use, and give feedback!*  
