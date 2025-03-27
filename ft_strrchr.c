@@ -6,7 +6,7 @@
 /*   By: obouayed <obouayed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:21:14 by obouayed          #+#    #+#             */
-/*   Updated: 2023/12/01 14:08:38 by obouayed         ###   ########.fr       */
+/*   Updated: 2025/03/27 15:07:48 by obouayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	a;
+	int		i;
+	char	*last_occurrence;
 
-	a = 0;
-	if (c > 127)
+	i = 0;
+	last_occurrence = NULL;
+	while (s[i])
 	{
-		while (s[a])
-		{
-			if (s[a] == (char)c)
-				return ((char *)&s[a]);
-			a++;
-		}
-		return (NULL);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			last_occurrence = (char *)&s[i];
+		i++;
 	}
-	while (s[a])
-		a++;
-	while (a >= 0)
-	{
-		if (s[a] == c)
-			return ((char *)&s[a]);
-		a--;
-	}
-	return (NULL);
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[i]);
+	return (last_occurrence);
 }
